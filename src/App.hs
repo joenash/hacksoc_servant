@@ -41,18 +41,8 @@ getPokemonId :: Int -> ClientM Pokemon
 getPokemonName :: String -> ClientM Pokemon
 getPokemonId :<|> getPokemonName = client api
 
-queries :: ClientM (Pokemon, Pokemon)
-queries = do
-  pid <- getPokemonId 25
-  pname <- getPokemonName "pikachu"
-  return (pid, pname)
+apiJS :: Text
+apiJS = jsForAPI api jquery
 
 run :: IO ()
-run = do
-  manager <- newManager defaultManagerSettings
-  res <- runClientM queries (ClientEnv manager (BaseUrl Http "pokeapi.co" 80 ""))
-  case res of
-    Left err -> putStrLn $ "Error: " ++ show err
-    Right (pid, pname) -> do
-      print pid
-      print pname
+run = print $ apiJS
