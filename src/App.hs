@@ -7,11 +7,14 @@ module App where
 
 import           Data.Aeson
 import           Data.Proxy
+import           Data.Text
 import           GHC.Generics
+import           Language.Javascript.JQuery
 import           Network.HTTP.Client        (defaultManagerSettings,
                                              newManager)
 import           Servant.API
 import           Servant.Client
+import           Servant.JS
 
 -- * api
 
