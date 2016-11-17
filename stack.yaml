@@ -1,7 +1,10 @@
-resolver: nightly-2016-04-14
+resolver: lts-7.4
 packages:
   - '.'
 extra-deps:
-  - servant-0.6.1
-  - servant-client-0.6.1
-  - servant-server-0.6.1
+  - servant-0.9.0.1
+  - servant-client-0.9.0.1
+  - servant-js-0.9
+  - servant-foreign-0.9.0.1
+  - servant-server-0.9.0.1
+  - http-api-data-0.3.2

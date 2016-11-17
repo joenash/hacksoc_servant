@@ -11,7 +11,6 @@ tests:
       - hspec
       - example-servant-minimal
       - servant-client
-      - warp >= 3.2.4
       - http-client
       - http-types
 
@@ -27,9 +26,16 @@ executables:
 
 dependencies:
   - base
-  - servant == 0.6.*
+  - servant
   - servant-server
   - transformers
   - aeson
   - wai
   - warp
+  - servant-client
+  - servant-js
+  - servant-foreign
+  - either
+  - http-client
+  - js-jquery
+  - text
